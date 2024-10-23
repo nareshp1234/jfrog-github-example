@@ -123,6 +123,7 @@ jobs:
             - name: build scan
               run: |   
                 echo $JFROG_CLI_COMMAND_SUMMARY_OUTPUT_DIR
+                ls -ltra $JFROG_CLI_COMMAND_SUMMARY_OUTPUT_DIR
                 jf build-scan
                 
             # - name: Write to workflow job summary
