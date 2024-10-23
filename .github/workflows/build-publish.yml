@@ -121,7 +121,8 @@ jobs:
                 jf rt build-publish
 
             - name: build scan
-              run: |            
+              run: |   
+                echo $JFROG_CLI_COMMAND_SUMMARY_OUTPUT_DIR
                 jf build-scan
                 
             # - name: Write to workflow job summary
