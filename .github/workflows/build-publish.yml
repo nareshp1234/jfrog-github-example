@@ -128,7 +128,7 @@ jobs:
               run: |
                     NOTE=$'>[!NOTE]\n>Frog Notes \n'
                     TIP=$'>[!TIP]\n>Hello JFrog\n'
-                    IMPORTANT=$'>[!IMPORTANT]\n>Hello IMPORTANT NOTE\n'
+                    IMPORTANT=$'>[!IMPORTANT]\n>Hello IMPORTANT NOTE:\n'
                     WARNING=$'>[!WARNING]\n>Hello WARNING NOTE\n'
                     CAUTION=$'>[!CAUTION]\n>Hello CAUTION NOTE\n'
                     echo "$NOTE" >> $GITHUB_STEP_SUMMARY
