@@ -114,6 +114,7 @@ jobs:
                  jf rt build-docker-create ${{ env.DOCKER_REPO }} --image-file metadata.json 
             - name: python curation
               run: |
+                rm -f Pipfile 
                 jf ca 
             - name: publish build info
               run: |
