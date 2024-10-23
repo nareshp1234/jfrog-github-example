@@ -35,7 +35,7 @@ jobs:
             - name: configure jfrog environment
               run: |
                 # Use a curated repository for python dependencies resolution
-                jf pip-config --repo-resolve=pipy-remote  
+                jf pip-config --repo-resolve=oidctest-pypi
 
             - name: configure environment
               run: |    
@@ -115,7 +115,7 @@ jobs:
             - name: python curation
               run: |
                 rm -f Pipfile 
-                jf pip-config --repo-resolve=pipy-remote 
+                jf pip-config --repo-resolve=oidctest-pypi
                 jf ca 
             - name: publish build info
               run: |
