@@ -1,5 +1,4 @@
 PyYAML==5.2
-paramiko==1.17.5
 urllib3==1.25.2
 nltk
 redis == 4.6.0
