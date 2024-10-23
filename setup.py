@@ -10,5 +10,5 @@ setup(
     author_email='jfrog@jfrog.com',
     url='https://github.com/carmithersh/carmit-testing',
     packages=['pythonExample'],
-    install_requires=['PyYAML==5.2', 'nltk','paramiko==1.17.5', 'urllib3==1.25.2','redis == 4.6.0','Flask==2.3.2','gunicorn==22.0.0'],
+    install_requires=['PyYAML==5.2', 'nltk', 'urllib3==1.25.2','redis == 4.6.0','Flask==2.3.2','gunicorn==22.0.0'],
 )
