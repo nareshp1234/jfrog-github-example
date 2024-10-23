@@ -19,15 +19,19 @@ permissions:
   security-events: write
   id-token: write
 jobs:
-  create-fix-pull-requests:
-    runs-on: ubuntu-latest
+  create-fix-repo-push:
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       #  IMPORTANT:
       #  1. See the following link for information about the tools that need to be installed for Frogbot to work - https://github.com/jfrog/frogbot/tree/master/docs/templates/github-actions/scan-and-fix
       #  2. Some projects require creating a frogbot-config.yml file. Read more about it here - https://github.com/jfrog/frogbot/blob/master/docs/frogbot-config.md
-
+      - name: Setup Node npm
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --upgrade pip
       - uses: jfrog/frogbot@v2
         with:
           oidc-provider-name: ps-jfrog-labs
