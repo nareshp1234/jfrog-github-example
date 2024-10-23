@@ -36,6 +36,7 @@ jobs:
       - uses: jfrog/frogbot@v2
         with:
           oidc-provider-name: ps-jfrog-labs
+          oidc-audience: ps-jfrog-oidc
         env:
           JFROG_CLI_LOG_LEVEL: DEBUG
           # [Mandatory if the two conditions below are met]
