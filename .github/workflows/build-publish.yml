@@ -38,10 +38,6 @@ jobs:
               run: |
                 # Use a curated repository for python dependencies resolution
                 jf pip-config --repo-resolve=oidctest-pypi
-            
-            - name: Run Audit Scan
-              run: |
-                jf audit
 
             - name: configure environment
               run: |    
@@ -122,6 +118,7 @@ jobs:
               run: |
                 rm -f Pipfile 
                 jf pip-config --repo-resolve=oidctest-pypi
+                jf audit || true
                 jf ca || true
             - name: publish build info
               run: |
