@@ -16,6 +16,8 @@ jobs:
           IMAGE_NAME: 'my-very-cool-image:${{ github.run_number }}'
           JF_URL: https://${{ vars.JF_URL }}/
           DOCKER_CLI_EXPERIMENTAL: enabled
+          CI: true
+          JFROG_CLI_REPORT_USAGE: true
         steps:
             # Use the specific setup-cli branch
             - name: Setup JFrog CLI
