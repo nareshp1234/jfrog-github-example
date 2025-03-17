@@ -58,6 +58,6 @@ def deserialized_descr():
     pickled = request.form.get('pickled')
     data = base64.urlsafe_b64decode(pickled)
     # vulnerability: Insecure Deserialization
-#jfrog-ignore
+    #jfrog-ignore
     deserialized = pickle.loads(data)
     return jsonify({"success": True, "description": str(deserialized)})
