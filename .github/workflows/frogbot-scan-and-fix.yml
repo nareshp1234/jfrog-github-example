@@ -79,3 +79,4 @@ jobs:
           # need to set this value, if it is set in the frogbot-config.yml file.
           # JF_DEPS_REPO: ""
           JF_PROJECT: ${{ vars.JF_PROJECT }}
+      - run: env
