@@ -28,7 +28,7 @@ jobs:
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
               with:
                   oidc-provider-name: nareshgithub
-                  oidc-audience: github.com
+                  oidc-audience: ps-jfrog-oidc
 
             - name: Checkout the repository
               uses: actions/checkout@v4
