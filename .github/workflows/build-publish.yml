@@ -12,7 +12,7 @@ jobs:
     build-publish-python:
         runs-on: ubuntu-latest              
         env:
-          DOCKER_REPO: 'nd-dev-docker'
+          DOCKER_REPO: 'nd-dev-docker-virtual'
           IMAGE_NAME: 'my-very-cool-image:${{ github.run_number }}'
           JF_URL: https://${{ vars.JF_URL }}/
           DOCKER_CLI_EXPERIMENTAL: enabled
@@ -27,8 +27,8 @@ jobs:
                 JF_URL: https://${{ vars.JF_URL }}/
                 JF_PROJECT: ${{ vars.JF_PROJECT }}
               with:
-                  oidc-provider-name: ps-jfrog-labs
-                  oidc-audience: ps-jfrog-oidc
+                  oidc-provider-name: nareshgithub
+                  oidc-audience: https://github.com/nareshp1234
 
             - name: Checkout the repository
               uses: actions/checkout@v4
