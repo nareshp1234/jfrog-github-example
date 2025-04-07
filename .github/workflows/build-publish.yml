@@ -12,7 +12,7 @@ jobs:
     build-publish-python:
         runs-on: ubuntu-latest              
         env:
-          DOCKER_REPO: 'nd-dev-docker-virtual'
+          DOCKER_REPO: 'np-dev-docker-virtual'
           IMAGE_NAME: 'my-very-cool-image:${{ github.run_number }}'
           JF_URL: https://${{ vars.JF_URL }}/
           DOCKER_CLI_EXPERIMENTAL: enabled
